@@ -26,6 +26,7 @@ class TestA14z8fyMiniTestPractice < MiniTest::Unit::TestCase
     assert_equal false, @my_class.enough_length?("ok")
     assert_equal false, @my_class.enough_length?("university")
     assert_equal true, @my_class.enough_length?("AKB")
+    assert_equal true, @my_class.enough_length?("AKB48")
     assert_equal true, @my_class.enough_length?("12345678")
   end
 
@@ -42,6 +43,8 @@ class TestA14z8fyMiniTestPractice < MiniTest::Unit::TestCase
 
   def test_hello
     assert_equal false, @my_class.hello("heLlo")
+    assert_equal false, @my_class.hello("hEllO")
+    assert_equal false, @my_class.hello("HELLO")
     assert_equal true, @my_class.hello("Hello")
   end
 
